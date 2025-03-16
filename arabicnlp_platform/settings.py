@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'account.apps.AccountsConfig',
+    'api.apps.ApiConfig',
+    'core.apps.CoreConfig',
+    'events.apps.EventsConfig',
+    'forum.apps.ForumConfig',
+    'institutions.apps.InstitutionsConfig',
+    'research.apps.ResearchConfig',
+    'ressources.apps.RessourcesConfig',
+    'search.apps.SearchConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +63,7 @@ ROOT_URLCONF = 'arabicnlp_platform.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +84,12 @@ WSGI_APPLICATION = 'arabicnlp_platform.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nom_de_votre_base',       # Nom de la base de données PostgreSQL
+        'USER': 'votre_utilisateur',        # Nom d'utilisateur PostgreSQL
+        'PASSWORD': 'votre_mot_de_passe',     # Mot de passe PostgreSQL
+        'HOST': 'localhost',                # Adresse du serveur PostgreSQL (souvent localhost)
+        'PORT': '5432',                     # Port par défaut de PostgreSQL
     }
 }
 
