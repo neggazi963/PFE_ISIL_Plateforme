@@ -9,7 +9,6 @@ ENV/
 .env.*.local
 
 # Base de données
-*.sqlite3
 *.db
 
 # Fichiers Python
