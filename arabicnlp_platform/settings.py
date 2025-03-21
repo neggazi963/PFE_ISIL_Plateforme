@@ -63,6 +63,8 @@ INSTALLED_APPS = [
     'Projects.apps.ProjectsConfig',
     'resources.apps.ResourcesConfig',
     'search.apps.SearchConfig',
+    'notifications.apps.NotificationsConfig',
+    'nlp_tools.apps.NlpToolsConfig',
 ]
 
 MIDDLEWARE = [
