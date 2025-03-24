@@ -60,11 +60,12 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'forum.apps.ForumConfig',
     'institutions.apps.InstitutionsConfig',
-    'Projects.apps.ProjectsConfig',
+    'projects.apps.ProjectsConfig',
     'resources.apps.ResourcesConfig',
     'search.apps.SearchConfig',
     'notifications.apps.NotificationsConfig',
     'nlp_tools.apps.NlpToolsConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -111,6 +112,7 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD', 'admin'),
         'HOST': os.getenv('DB_HOST', 'localhost'),
         'PORT': os.getenv('DB_PORT', '5432'),
+        
     }
 }
 

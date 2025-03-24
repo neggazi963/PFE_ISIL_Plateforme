@@ -1,1 +1,60 @@
 
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1d566e;">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+          <img src="/static/img/logo.png" alt="Logo" height="40">
+      </a>
+      
+      <form class="d-flex mx-auto search-form" role="search" action="/search" method="GET">
+          <input class="form-control me-2" type="search" name="q" placeholder="Rechercher des ressources, outils, corpus..." aria-label="Search">
+          <button class="btn btn-success" type="submit">Chercher</button>
+      </form>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="btn btn-outline-light me-2" href="/login">Connexion</a>
+              </li>
+              <li class="nav-item">
+                  <a class="btn btn-light" href="/register">Inscription</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<div class="sidebar">
+  <div class="sidebar-menu">
+      <a href="/" class="sidebar-item {% if active_page == 'accueil' %}active{% endif %}">
+          Accueil
+      </a>
+      <a href="/corpus" class="sidebar-item {% if active_page == 'corpus' %}active{% endif %}">
+          Corpus
+      </a>
+      <a href="/outils" class="sidebar-item {% if active_page == 'outils' %}active{% endif %}">
+          Outils
+      </a>
+      <a href="/ressources" class="sidebar-item {% if active_page == 'ressources' %}active{% endif %}">
+          Ressources
+      </a>
+      <a href="/projets" class="sidebar-item {% if active_page == 'projets' %}active{% endif %}">
+          Projets de Recherche
+      </a>
+      <a href="/appels" class="sidebar-item {% if active_page == 'appels' %}active{% endif %}">
+          Appels à Communication
+      </a>
+      <a href="/communaute" class="sidebar-item {% if active_page == 'communaute' %}active{% endif %}">
+          Communauté
+      </a>
+      <a href="/guide" class="sidebar-item {% if active_page == 'guide' %}active{% endif %}">
+          Guide & Formation
+      </a>
+      <a href="/evenements" class="sidebar-item {% if active_page == 'evenements' %}active{% endif %}">
+          Événements
+      </a>
+  </div>
+</div>
