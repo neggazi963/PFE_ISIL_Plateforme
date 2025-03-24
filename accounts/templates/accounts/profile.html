@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Profile" %} | {% trans "Arabic NLP Platform" %}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+            <div class="card">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">{% trans "Your Profile" %}</h4>
+                    <a href="{% url 'accounts:profile_edit' %}" class="btn btn-light btn-sm">{% trans "Edit Profile" %}</a>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">{% trans "Email" %}:</div>
+                        <div class="col-md-8">{{ user.email }}</div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">{% trans "Full Name" %}:</div>
+                        <div class="col-md-8">{{ user.full_name }}</div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">{% trans "Institution" %}:</div>
+                        <div class="col-md-8">{{ user.institution|default:"-" }}</div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">{% trans "User Type" %}:</div>
+                        <div class="col-md-8">
+                            {% if user.is_researcher %}
+                                <span class="badge bg-info me-2">{% trans "Researcher" %}</span>
+                            {% endif %}
+                            {% if user.is_developer %}
+                                <span class="badge bg-success me-2">{% trans "Developer" %}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">{% trans "Biography" %}:</div>
+                        <div class="col-md-8">{{ user.biography|default:"-"|linebreaks }}</div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">{% trans "Research Interests" %}:</div>
+                        <div class="col-md-8">{{ user.research_interests|default:"-"|linebreaks }}</div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">{% trans "Member Since" %}:</div>
+                        <div class="col-md-8">{{ user.date_joined|date:"F j, Y" }}</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'accounts:password_change' %}" class="btn btn-outline-secondary">{% trans "Change Password" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

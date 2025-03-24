@@ -60,11 +60,12 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'forum.apps.ForumConfig',
     'institutions.apps.InstitutionsConfig',
-    'Projects.apps.ProjectsConfig',
+    'projects.apps.ProjectsConfig',
     'resources.apps.ResourcesConfig',
     'search.apps.SearchConfig',
     'notifications.apps.NotificationsConfig',
     'nlp_tools.apps.NlpToolsConfig',
+    
 ]
 
 MIDDLEWARE = [
