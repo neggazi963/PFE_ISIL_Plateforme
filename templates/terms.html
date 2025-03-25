@@ -1,0 +1,104 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block title %}{%
+trans "Conditions d'utilisation - Plateforme TAL arabe" %}{% endblock %} {%
+block content %}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="mb-4">{% trans "Conditions d'utilisation" %}</h1>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">1. {% trans "Acceptation des conditions" %}</h2>
+          <p>
+            {% trans "En accédant à la Plateforme TAL arabe, vous acceptez
+            d'être lié par ces conditions d'utilisation, toutes les lois et
+            réglementations applicables, et acceptez que vous êtes responsable
+            du respect des lois locales applicables." %}
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">2. {% trans "Utilisation de la licence" %}</h2>
+          <p>
+            {% trans "La permission est accordée d'utiliser temporairement la
+            Plateforme TAL arabe pour un usage personnel et non commercial.
+            Cette licence ne comprend pas :" %}
+          </p>
+          <ul>
+            <li>{% trans "La modification ou la copie des ressources" %}</li>
+            <li>
+              {% trans "L'utilisation des ressources à des fins commerciales" %}
+            </li>
+            <li>
+              {% trans "La tentative de décompiler ou d'extraire le code source"
+              %}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">3. {% trans "Compte utilisateur" %}</h2>
+          <p>
+            {% trans "Pour accéder à certaines fonctionnalités de la plateforme,
+            vous devrez créer un compte. Vous êtes responsable de :" %}
+          </p>
+          <ul>
+            <li>{% trans "Maintenir la confidentialité de votre compte" %}</li>
+            <li>
+              {% trans "Restreindre l'accès à votre ordinateur et/ou compte" %}
+            </li>
+            <li>
+              {% trans "Toutes les activités effectuées sous votre compte" %}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">4. {% trans "Propriété intellectuelle" %}</h2>
+          <p>
+            {% trans "Les ressources, outils et contenus disponibles sur la
+            plateforme sont protégés par les lois sur la propriété
+            intellectuelle. Leur utilisation est soumise aux conditions
+            spécifiques de chaque ressource." %}
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">5. {% trans "Limitation de responsabilité" %}</h2>
+          <p>
+            {% trans "La Plateforme TAL arabe ne sera pas tenue responsable des
+            dommages directs, indirects, accessoires, spéciaux ou consécutifs
+            résultant de l'utilisation ou de l'impossibilité d'utiliser la
+            plateforme." %}
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="h4 mb-3">6. {% trans "Modifications" %}</h2>
+          <p>
+            {% trans "Nous nous réservons le droit de modifier ces conditions
+            d'utilisation à tout moment. Les modifications entrent en vigueur
+            dès leur publication sur la plateforme." %}
+          </p>
+
+          <p class="text-muted mt-4">
+            <small
+              >{% trans "Dernière mise à jour :" %} {% now "d F Y" %}</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
