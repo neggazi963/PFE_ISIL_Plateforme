@@ -13,7 +13,7 @@ trans "Accueil - Plateforme TAL arabe" %}{% endblock %} {% block content %}
           automatique de la langue arabe. Collaborez avec d'autres chercheurs et
           développeurs sur des projets innovants." %}
         </p>
-        <a href="{% url 'resources:list' %}" class="btn btn-light btn-lg">
+        <a href="{% url 'accounts:login' %}" class="btn btn-light btn-lg">
           {% trans "Explorer les ressources" %}
         </a>
       </div>
@@ -74,7 +74,7 @@ trans "Accueil - Plateforme TAL arabe" %}{% endblock %} {% block content %}
 <div class="container mb-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>{% trans "Actualités" %}</h2>
-    <a href="{% url 'news:list' %}" class="text-primary"
+    <a href="{% url 'accounts:login' %}" class="text-primary"
       >{% trans "Voir tout" %}</a
     >
   </div>
@@ -134,7 +134,7 @@ trans "Accueil - Plateforme TAL arabe" %}{% endblock %} {% block content %}
 <div class="container mb-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>{% trans "Ressources populaires" %}</h2>
-    <a href="{% url 'resources:list' %}" class="text-primary"
+    <a href="{% url 'accounts:login' %}" class="text-primary"
       >{% trans "Voir tout" %}</a
     >
   </div>
@@ -200,7 +200,7 @@ trans "Accueil - Plateforme TAL arabe" %}{% endblock %} {% block content %}
 <div class="container mb-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>{% trans "Événements à venir" %}</h2>
-    <a href="{% url 'events:list' %}" class="text-primary"
+    <a href="{% url 'accounts:login' %}" class="text-primary"
       >{% trans "Voir tout" %}</a
     >
   </div>
@@ -285,7 +285,7 @@ trans "Accueil - Plateforme TAL arabe" %}{% endblock %} {% block content %}
 <div class="container mb-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>{% trans "Notre communauté" %}</h2>
-    <a href="{% url 'community:list' %}" class="text-primary"
+    <a href="{% url 'accounts:login' %}" class="text-primary"
       >{% trans "Voir tout" %}</a
     >
   </div>
