@@ -1,0 +1,125 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block title %}{%
+trans "À propos - Plateforme TAL arabe" %}{% endblock %} {% block content %}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="mb-4">{% trans "À propos de la plateforme" %}</h1>
+
+      <div class="card mb-5">
+        <div class="card-body">
+          <h2 class="h4 mb-4">{% trans "Notre mission" %}</h2>
+          <p class="lead">
+            {% trans "La plateforme TAL arabe est dédiée à l'avancement du
+            traitement automatique de la langue arabe à travers la
+            collaboration, le partage de ressources et l'innovation." %}
+          </p>
+          <p>
+            {% trans "Notre objectif est de créer un écosystème dynamique où
+            chercheurs, développeurs et linguistes peuvent travailler ensemble
+            pour améliorer les technologies du langage pour l'arabe." %}
+          </p>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-md-4">
+          <div class="text-center mb-4">
+            <i class="fas fa-database fa-3x text-primary mb-3"></i>
+            <h3 class="h5">{% trans "Ressources" %}</h3>
+            <p>
+              {% trans "Accès à des corpus et des outils de qualité pour la
+              recherche et le développement." %}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center mb-4">
+            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+            <h3 class="h5">{% trans "Collaboration" %}</h3>
+            <p>
+              {% trans "Une communauté active de professionnels et de chercheurs
+              partageant leurs connaissances." %}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center mb-4">
+            <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
+            <h3 class="h5">{% trans "Innovation" %}</h3>
+            <p>
+              {% trans "Développement de nouvelles solutions pour les défis du
+              TAL arabe." %}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-5">
+        <div class="card-body">
+          <h2 class="h4 mb-4">{% trans "Notre équipe" %}</h2>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-center">
+                <div class="bg-primary text-white rounded-circle p-3 me-3">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1">Prof. Ahmed Hassan</h5>
+                  <p class="text-muted mb-0">
+                    {% trans "Directeur scientifique" %}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-center">
+                <div class="bg-primary text-white rounded-circle p-3 me-3">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1">Dr. Leila Karimi</h5>
+                  <p class="text-muted mb-0">
+                    {% trans "Responsable technique" %}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="h4 mb-4">{% trans "Nos partenaires" %}</h2>
+          <div class="row align-items-center text-center">
+            <div class="col-md-4 mb-4">
+              <img
+                src="{% static 'img/partner1.png' %}"
+                alt="Université"
+                class="img-fluid"
+                style="max-height: 80px"
+              />
+            </div>
+            <div class="col-md-4 mb-4">
+              <img
+                src="{% static 'img/partner2.png' %}"
+                alt="Institut de recherche"
+                class="img-fluid"
+                style="max-height: 80px"
+              />
+            </div>
+            <div class="col-md-4 mb-4">
+              <img
+                src="{% static 'img/partner3.png' %}"
+                alt="Centre de recherche"
+                class="img-fluid"
+                style="max-height: 80px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

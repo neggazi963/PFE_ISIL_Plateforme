@@ -1,0 +1,364 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block title %}{%
+trans "Accueil - Plateforme TAL arabe" %}{% endblock %} {% block content %}
+<!-- Hero Section -->
+<div class="hero-section bg-primary text-white py-5 mb-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1 class="display-4 mb-4">
+          {% trans "Bienvenue sur la plateforme TAL arabe" %}
+        </h1>
+        <p class="lead mb-4">
+          {% trans "Explorez les ressources, outils et corpus pour le traitement
+          automatique de la langue arabe. Collaborez avec d'autres chercheurs et
+          développeurs sur des projets innovants." %}
+        </p>
+        <a href="{% url 'accounts:login' %}" class="btn btn-light btn-lg">
+          {% trans "Explorer les ressources" %}
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <img
+          src="{% static 'img/tal-arabe-illustration.png' %}"
+          alt="TAL arabe illustration"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Section -->
+<div class="container mb-5">
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="fas fa-chart-bar fa-3x mb-3 text-primary"></i>
+          <h3 class="card-title">{% trans "Parcourir les corpus" %}</h3>
+          <p class="card-text">32 {% trans "Corpus disponibles" %}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
+          <h3 class="card-title">{% trans "Utiliser les outils" %}</h3>
+          <p class="card-text">28 {% trans "Outils de TAL" %}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="fas fa-project-diagram fa-3x mb-3 text-primary"></i>
+          <h3 class="card-title">{% trans "Soumettre un projet" %}</h3>
+          <p class="card-text">45 {% trans "Projets actifs" %}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+          <h3 class="card-title">{% trans "Rejoindre la communauté" %}</h3>
+          <p class="card-text">1250+ {% trans "Membres" %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- News Section -->
+<div class="container mb-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>{% trans "Actualités" %}</h2>
+    <a href="{% url 'accounts:login' %}" class="text-primary"
+      >{% trans "Voir tout" %}</a
+    >
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge bg-primary">{% trans "Événement" %}</span>
+            <span class="badge bg-secondary">{% trans "Conférence" %}</span>
+          </div>
+          <h5 class="card-title">{% trans "Conférence ICALP 2025" %}</h5>
+          <p class="card-text">
+            {% trans "Ouverture des inscriptions pour la conférence
+            internationale sur le traitement automatique de la langue arabe." %}
+          </p>
+          <small class="text-muted">15 mars 2025</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge bg-success">{% trans "Corpus" %}</span>
+            <span class="badge bg-info">{% trans "Actualités" %}</span>
+          </div>
+          <h5 class="card-title">{% trans "Nouveau corpus d'actualités" %}</h5>
+          <p class="card-text">
+            {% trans "Publication d'un nouveau corpus d'articles d'actualités en
+            arabe comprenant plus de 100 millions de mots." %}
+          </p>
+          <small class="text-muted">10 mars 2025</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge bg-warning">{% trans "Outil" %}</span>
+            <span class="badge bg-info">{% trans "Mise à jour" %}</span>
+          </div>
+          <h5 class="card-title">{% trans "ArabiNER v2.0 disponible" %}</h5>
+          <p class="card-text">
+            {% trans "La nouvelle version d'ArabiNER offre une amélioration de
+            15% des performances et le support de nouveaux dialectes." %}
+          </p>
+          <small class="text-muted">2 mars 2025</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popular Resources Section -->
+<div class="container mb-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>{% trans "Ressources populaires" %}</h2>
+    <a href="{% url 'accounts:login' %}" class="text-primary"
+      >{% trans "Voir tout" %}</a
+    >
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge bg-success">{% trans "Corpus" %}</span>
+            <span class="badge bg-secondary">{% trans "Texte" %}</span>
+            <span class="badge bg-info">{% trans "Actualités" %}</span>
+          </div>
+          <h5 class="card-title">ArabicNews2024</h5>
+          <p class="card-text">
+            {% trans "Corpus d'articles d'actualités en arabe standard moderne
+            collectés à partir de diverses sources médiatiques arabes." %}
+          </p>
+          <small class="text-muted">100 millions de mots • 2020-2024</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge bg-primary">{% trans "Audio" %}</span>
+            <span class="badge bg-secondary">{% trans "Transcrit" %}</span>
+            <span class="badge bg-info">{% trans "Multi-dialecte" %}</span>
+          </div>
+          <h5 class="card-title">Arabic Speech DB</h5>
+          <p class="card-text">
+            {% trans "Base de données de parole arabe comprenant plus de 3000
+            heures d'enregistrements transcrits couvrant plusieurs dialectes
+            régionaux." %}
+          </p>
+          <small class="text-muted">3000+ heures • 5000+ locuteurs</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge bg-warning">{% trans "Outil" %}</span>
+            <span class="badge bg-secondary"
+              >{% trans "Analyse morphologique" %}</span
+            >
+            <span class="badge bg-info">Python</span>
+          </div>
+          <h5 class="card-title">ArabiMorphAnalyzer</h5>
+          <p class="card-text">
+            {% trans "Analyseur morphologique avancé pour l'arabe standard
+            moderne avec support des différentes formes diacritiques." %}
+          </p>
+          <small class="text-muted">Version: 3.2.1 • Open source</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Upcoming Events Section -->
+<div class="container mb-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>{% trans "Événements à venir" %}</h2>
+    <a href="{% url 'accounts:login' %}" class="text-primary"
+      >{% trans "Voir tout" %}</a
+    >
+  </div>
+  <div class="list-group">
+    <div class="list-group-item">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <div class="text-center bg-primary text-white p-3 rounded">
+            <div class="h3 mb-0">25</div>
+            <div class="small">MAR</div>
+          </div>
+        </div>
+        <div class="col">
+          <h5 class="mb-1">
+            {% trans "Workshop sur la reconnaissance d'entités nommées en arabe"
+            %}
+          </h5>
+          <p class="mb-1">
+            <i class="fas fa-video me-2"></i>{% trans "En ligne" %} •
+            14:00-17:00 GMT+1
+          </p>
+          <div>
+            <span class="badge bg-primary">Workshop</span>
+            <span class="badge bg-secondary">NER</span>
+            <span class="badge bg-success">{% trans "Gratuit" %}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <div class="text-center bg-primary text-white p-3 rounded">
+            <div class="h3 mb-0">10</div>
+            <div class="small">AVR</div>
+          </div>
+        </div>
+        <div class="col">
+          <h5 class="mb-1">
+            ICALP 2025 - International Conference on Arabic Language Processing
+          </h5>
+          <p class="mb-1">
+            <i class="fas fa-map-marker-alt me-2"></i>{% trans "Le Caire,
+            Égypte" %} • 10-12 Avril 2025
+          </p>
+          <div>
+            <span class="badge bg-primary">{% trans "Conférence" %}</span>
+            <span class="badge bg-info">International</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <div class="text-center bg-primary text-white p-3 rounded">
+            <div class="h3 mb-0">20</div>
+            <div class="small">MAI</div>
+          </div>
+        </div>
+        <div class="col">
+          <h5 class="mb-1">
+            {% trans "Atelier sur les modèles de langage pour l'arabe" %}
+          </h5>
+          <p class="mb-1">
+            <i class="fas fa-map-marker-alt me-2"></i>{% trans "Rabat, Maroc" %}
+            • 20-21 Mai 2025
+          </p>
+          <div>
+            <span class="badge bg-primary">{% trans "Atelier" %}</span>
+            <span class="badge bg-secondary"
+              >{% trans "Modèles de langage" %}</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Community Section -->
+<div class="container mb-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>{% trans "Notre communauté" %}</h2>
+    <a href="{% url 'accounts:login' %}" class="text-primary"
+      >{% trans "Voir tout" %}</a
+    >
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="mb-4">{% trans "Nouveaux membres" %}</h4>
+      <div class="list-group">
+        <div class="list-group-item">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary text-white rounded-circle p-3 me-3">AM</div>
+            <div>
+              <h6 class="mb-0">Ahmed Mahmoud</h6>
+              <small class="text-muted"
+                >{% trans "Chercheur, Université du Caire" %}</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="list-group-item">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary text-white rounded-circle p-3 me-3">LN</div>
+            <div>
+              <h6 class="mb-0">Leila Nasser</h6>
+              <small class="text-muted"
+                >{% trans "Développeuse NLP, TechArabia" %}</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="list-group-item">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary text-white rounded-circle p-3 me-3">SK</div>
+            <div>
+              <h6 class="mb-0">Samir Khalid</h6>
+              <small class="text-muted"
+                >{% trans "Linguiste, Université de Tunis" %}</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4 class="mb-4">{% trans "Discussions récentes" %}</h4>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h6 class="mb-1">
+              {% trans "Challenges pour les modèles de langage dialectaux" %}
+            </h6>
+            <small class="text-muted">{% trans "il y a 2 jours" %}</small>
+          </div>
+          <p class="mb-1">
+            {% trans "Discussion sur les défis spécifiques aux dialectes arabes
+            pour les modèles de langage." %}
+          </p>
+          <small class="text-muted">18 {% trans "réponses" %}</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h6 class="mb-1">
+              {% trans "Annotation d'entités médicales en arabe" %}
+            </h6>
+            <small class="text-muted">{% trans "il y a 3 jours" %}</small>
+          </div>
+          <p class="mb-1">
+            {% trans "Recherche de contributeurs pour un projet d'annotation de
+            termes médicaux en arabe." %}
+          </p>
+          <small class="text-muted">7 {% trans "réponses" %}</small>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

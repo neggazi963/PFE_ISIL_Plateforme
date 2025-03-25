@@ -1,0 +1,115 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block title %}{%
+trans "Politique de confidentialité - Plateforme TAL arabe" %}{% endblock %} {%
+block content %}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="mb-4">{% trans "Politique de confidentialité" %}</h1>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">1. {% trans "Collecte des informations" %}</h2>
+          <p>
+            {% trans "Nous collectons les informations suivantes lorsque vous
+            utilisez notre plateforme :" %}
+          </p>
+          <ul>
+            <li>
+              {% trans "Informations personnelles (nom, email, institution)" %}
+            </li>
+            <li>{% trans "Données d'utilisation de la plateforme" %}</li>
+            <li>
+              {% trans "Informations techniques (adresse IP, navigateur)" %}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">2. {% trans "Utilisation des informations" %}</h2>
+          <p>{% trans "Nous utilisons les informations collectées pour :" %}</p>
+          <ul>
+            <li>{% trans "Gérer votre compte" %}</li>
+            <li>{% trans "Améliorer nos services" %}</li>
+            <li>{% trans "Communiquer avec vous" %}</li>
+            <li>{% trans "Personnaliser votre expérience" %}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">3. {% trans "Protection des données" %}</h2>
+          <p>
+            {% trans "Nous mettons en œuvre des mesures de sécurité pour
+            protéger vos informations :" %}
+          </p>
+          <ul>
+            <li>{% trans "Chiffrement des données sensibles" %}</li>
+            <li>{% trans "Accès restreint aux informations personnelles" %}</li>
+            <li>{% trans "Surveillance régulière de nos systèmes" %}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">4. {% trans "Cookies" %}</h2>
+          <p>{% trans "Nous utilisons des cookies pour :" %}</p>
+          <ul>
+            <li>{% trans "Maintenir votre session" %}</li>
+            <li>{% trans "Mémoriser vos préférences" %}</li>
+            <li>{% trans "Analyser l'utilisation de la plateforme" %}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">5. {% trans "Partage des informations" %}</h2>
+          <p>
+            {% trans "Nous ne partageons pas vos informations personnelles avec
+            des tiers, sauf :" %}
+          </p>
+          <ul>
+            <li>{% trans "Avec votre consentement" %}</li>
+            <li>{% trans "Pour des obligations légales" %}</li>
+            <li>{% trans "Pour protéger nos droits" %}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">6. {% trans "Vos droits" %}</h2>
+          <p>{% trans "Vous avez le droit de :" %}</p>
+          <ul>
+            <li>{% trans "Accéder à vos données personnelles" %}</li>
+            <li>{% trans "Corriger vos informations" %}</li>
+            <li>{% trans "Supprimer votre compte" %}</li>
+            <li>{% trans "Retirer votre consentement" %}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="h4 mb-3">7. {% trans "Contact" %}</h2>
+          <p>
+            {% trans "Pour toute question concernant cette politique de
+            confidentialité, contactez-nous à :" %}
+            <a href="mailto:privacy@talarabe.org">privacy@talarabe.org</a>
+          </p>
+
+          <p class="text-muted mt-4">
+            <small
+              >{% trans "Dernière mise à jour :" %} {% now "d F Y" %}</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
